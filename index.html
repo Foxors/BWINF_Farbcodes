@@ -9,20 +9,27 @@
 </head>
 
 <body>
-    <main>
+    <header>
         <h1>BWINF Farbcodes</h1>
-        Trennen: <input id="trennen" type="checkbox"><br>
-        Code: <p class="eingabe" id="code" contenteditable="plaintext-only"></p><br>
-        <button id="importieren">Code importieren</button><br>
-        <button id="hinzufuegen">+ Wettbewerb hinzufügen</button>
-        <button id="entfernen">- Wettbewerb entfernen</button>
-        <div id="wettbewerbe">
-        </div><br>
-        <script src="script.js"></script>
+    </header>
+
+    <main>
+        <div class="optionsn">
+            <label for="trennen">Trennen: </label><input id="trennen" type="checkbox"><p>
+                    <!-- maybe <p> to an <input> ? i need to look at js for that... -->
+            <label for="code">Code: </label><p class="eingabe" id="code" contenteditable="plaintext-only"></p>
+            <button id="importieren">Code importieren</button>
+            <button id="hinzufuegen">+ Wettbewerb hinzufügen</button>
+            <button id="entfernen">- Wettbewerb entfernen</button>
+        </div>
+        <div id="wettbewerbe" class="competitions">
+            <!-- Competitions for selection -->
+        </div>
     </main>
 
     <footer>
-        <p class="footer-element"><a href="https://github.com/KR0K0BIL/BWINF_Farbcodes">Github</a></p>
-        <p class="footer-element"><a href="https://bwinf.de/bundeswettbewerb/">Bundeswettbewerb Informatik</a></p>
+        <p class="footer-element"><a href="https://github.com/KR0K0BIL/BWINF_Farbcodes">Github</a> - <a href="https://bwinf.de/bundeswettbewerb/">Bundeswettbewerb Informatik</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
