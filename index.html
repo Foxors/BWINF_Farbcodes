@@ -13,13 +13,19 @@
         <h1>BWINF Farbcodes</h1>
     </header>
 
+    <div class="inputBar">
+        <label for="code"><p>Code:</p></label>
+        <p class="eingabe" id="code" contenteditable="plaintext-only"></p>
+    </div>
+
     <div class="options">
-        <label for="trennen">Trennen: </label><input id="trennen" type="checkbox"><p>
-                <!-- maybe <p> to an <input> ? i need to look at js for that... -->
-        <label for="code">Code: </label><p class="eingabe" id="code" contenteditable="plaintext-only"></p>
+        <!-- maybe <p> to an <input> ? i need to look at js for that... -->
         <button id="importieren">Code importieren</button>
         <button id="hinzufuegen">+ Wettbewerb hinzufügen</button>
         <button id="entfernen">- Wettbewerb entfernen</button>
+        
+        <label class="inputLabel" for="trennen"><p>Trennen?</p></label>
+        <input id="trennen" type="checkbox"><label class="slider" for="trennen"></label>
     </div>
 
     <div id="wettbewerbe" class="competitions">
