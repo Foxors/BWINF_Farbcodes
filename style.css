@@ -1,18 +1,46 @@
 body {
     background-color: #fef4d1;
     margin: 0px;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
+
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "options competitions"
+    "footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 15% 80% 5%;
 }
 
-main {
-    line-height: 150%;
-    margin: 12px;
-    flex: 1;
+header {
+    grid-area: header;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center; 
+}
+
+header h1 {
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.options {
+    grid-area: options;
+}
+
+.competitions {
+    grid-area: competitions;
 }
 
 footer {
+    grid-area: footer;
+
     background-color: #ffffffa0;
     padding: 1px;
 }
