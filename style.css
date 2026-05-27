@@ -6,7 +6,21 @@
     --theme-clr1: #fddaa6;
     --theme-clr2: #fdcb80;
     --theme-clr3: #fcc573;
+    --text-color: #222222;
 }
+
+/* dark style (work in progress) */
+/*@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-clr: #FA9600;
+        --theme-clr-light: #444444;
+        --theme-clr0: rgba(255,255,255,0.3);
+        --theme-clr1: #666666;
+        --theme-clr2: #999999;
+        --theme-clr3: #CCCCCC;
+        --text-color: #e6e7e8;
+  }
+}*/
 
 body {
     background-color: var(--theme-clr-light);
@@ -29,7 +43,13 @@ body {
 
 /* Default elements */
 p {
-    color: var();
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+a {
+    color: var(--theme-clr);
+    font-weight: bold;
     font-size: 1em;
 }
 
@@ -76,8 +96,14 @@ select:active {
     width: 100%;
     font-size: 0.8em;
 }
+
 .inputLabel p {
     margin: 1em 0 0 0;
+}
+
+label {
+    color: var(--text-color);
+    font-size: 1em;
 }
 
 input.switch {
@@ -188,6 +214,8 @@ header h1 {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 10px;
+
+    color: var(--text-color);
 }
 
 .ungueltig {
