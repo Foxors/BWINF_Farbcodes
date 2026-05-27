@@ -53,6 +53,10 @@ a {
     font-size: 1em;
 }
 
+a:hover, a:focus {
+    color: var(--theme-clr3);
+}
+
 h1 {
     color: var(--theme-clr);
     font-size: 2em;
@@ -75,7 +79,7 @@ button {
 
     cursor: pointer;
 
-    transition: box-shadow 0.3s, color 0.2s, background-color 20.5s;
+    transition: box-shadow 0.3s, color 0.2s;
 }
 
 select:hover,
