@@ -36,10 +36,12 @@ p {
 h1 {
     color: var(--theme-clr);
     font-size: 2em;
+    margin: 0;
 }
 h2 {
     color: var(--theme-clr);
     font-size: 1.8em;
+    margin: 0;
 }
 
 select,
@@ -79,6 +81,8 @@ select:active {
 }
 
 /* Special parts */
+
+/* Header */
 header {
     grid-area: header;
 
@@ -96,53 +100,7 @@ header h1 {
     text-align: center;
 }
 
-.options {
-    grid-area: options;
-    padding: 16px;
-}
-
-.options button {
-    width: 100%;
-}
-
-.options input[type="checkbox"] {
-    display: none;
-}
-.options .slider {
-    display: block;
-    width: calc(100% - 14px);
-    height: 20px;
-
-    padding: 5px;
-    margin: 2px;
-    background-color: var(--theme-clr0);
-    border: solid 2px var(--theme-clr2);
-
-    border-radius: 0.25rem;
-
-    cursor: pointer;
-}
-.options .slider::after {
-    content: "";
-
-    display: block;
-    height: 16px;
-    width: 50%;
-    border-radius: 0.25rem;
-    border: 2px solid var(--theme-clr);
-
-    transition: all 0.1s;
-}
-.options input[type="checkbox"]:checked + .slider::after {
-    background-color: var(--theme-clr);
-    margin-left: calc(50% - 5px);
-}
-
-.competitions {
-    grid-area: competitions;
-    padding: 16px;
-}
-
+/* Inputbar under header */
 .inputBar {
     grid-area: inputBar;
     width: calc(100% - 40px);
@@ -170,11 +128,65 @@ header h1 {
     transition: box-shadow 0.3s, color 0.2s;
 }
 
-footer {
-    grid-area: footer;
+.options {
+    grid-area: options;
+    padding: 16px;
+}
 
-    background-color: #;
-    padding: 1px;
+.options button {
+    width: 100%;
+}
+
+.options input[type="checkbox"] {
+    display: none;
+}
+
+.options .slider {
+    display: block;
+    width: calc(100% - 14px);
+    height: 20px;
+
+    padding: 5px;
+    margin: 2px;
+    background-color: var(--theme-clr0);
+    border: solid 2px var(--theme-clr2);
+
+    border-radius: 0.25rem;
+
+    cursor: pointer;
+}
+
+.options .slider::after {
+    content: "";
+
+    display: block;
+    height: 20px;
+    width: 50%;
+    border-radius: 0.25rem;
+    background-color: var(--theme-clr3);
+
+    transition: all 0.1s;
+}
+
+.options input[type="checkbox"]:checked + .slider::after {
+    background-color: var(--theme-clr);
+    margin-left: calc(50%);
+}
+
+.competitions {
+    grid-area: competitions;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.competitions div .runden {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10px;
 }
 
 .ungueltig {
@@ -187,13 +199,14 @@ footer {
     width: fit-content;
 }
 
-.runden {
+footer {
+    grid-area: footer;
+
+    background-color: var(--theme-clr0);
+
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 10px;
+    align-items: center;
+    padding: 8px;
 }
 
-.runde {
-    white-space: nowrap;
-}
+
