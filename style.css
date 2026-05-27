@@ -9,19 +9,6 @@
     --text-color: #222222;
 }
 
-/* dark style (work in progress) */
-/*@media (prefers-color-scheme: dark) {
-    :root {
-        --theme-clr: #FA9600;
-        --theme-clr-light: #444444;
-        --theme-clr0: rgba(255,255,255,0.3);
-        --theme-clr1: #666666;
-        --theme-clr2: #999999;
-        --theme-clr3: #CCCCCC;
-        --text-color: #e6e7e8;
-  }
-}*/
-
 body {
     background-color: var(--theme-clr-light);
     margin: 0;
@@ -214,6 +201,8 @@ header h1 {
     transition: box-shadow 0.3s, color 0.2s;
 }
 
+/* Options on the side */
+
 .options {
     grid-area: options;
     padding: 16px;
@@ -222,6 +211,8 @@ header h1 {
 .options button {
     width: 100%;
 }
+
+/* The list of competitions with their rounds */
 
 .competitions {
     grid-area: competitions;
@@ -265,6 +256,9 @@ header h1 {
     width: 100%;
 }
 
+
+/* Footer */
+
 footer {
     grid-area: footer;
 
@@ -274,6 +268,9 @@ footer {
     align-items: center;
     padding: 8px;
 }
+
+
+/* Do some stuff to fit everything on handy display */
 
 @media screen and (max-width: 900px) {
     body {
