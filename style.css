@@ -160,7 +160,8 @@ header h1 {
     padding: 0;
     margin: 0;
     width: 100%;
-    text-align: center;
+    text-align: left;
+    padding: 0 0 0 16px;
 }
 
 /* Inputbar under header */
@@ -212,7 +213,12 @@ header h1 {
     align-items: center;
 }
 
-.competitions div .runden {
+.competitions div {
+    width: 100%;
+    max-width: 50em;
+}
+
+.competitions .runden {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -221,14 +227,21 @@ header h1 {
     color: var(--text-color);
 }
 
-.ungueltig {
-    border: solid;
-    border-color: gray;
-    background-color: ;
-    padding: 2px 6px;
-    margin: 4px;
-    border-radius: 2px;
-    width: fit-content;
+.competitions .runden .runde {
+    width: calc(33.3% - 8px);
+}
+
+.competitions .runden .runde select {
+    width: 100%;
+}
+
+.competitions .ungueltig {
+    border: solid 2px var(--theme-clr3);
+    background-color: var(--theme-clr);
+    padding: 6px 6px;
+    margin: 2px;
+    border-radius: 0.25em;
+    width: 100%;
 }
 
 footer {
@@ -241,7 +254,7 @@ footer {
     padding: 8px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
     body {
         grid-template-areas:
             "header"
@@ -251,6 +264,11 @@ footer {
             "footer";
 
         grid-template-columns: 100%;
-        grid-template-rows: 6em auto auto auto 3em;
+        grid-template-rows: 6em min-content min-content auto 3em;
+    }
+    
+    header h1 {
+        text-align: center;
+        margin: 0;
     }
 }
